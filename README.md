@@ -35,3 +35,18 @@ Run this in node command line
 foo = () => console.log('foobar');
 obj.cbHello(2222, foo);
 ```
+
+`asyncHello(...)`
+
+Now asyncHello uses `async` and `await` to pause function execution, to allow simpler code writing without more indented async blocks
+
+Run this in node command line
+```javascript
+foo = () => console.log('foobar');
+obj.cbHello(2222, foo);
+// Notice your foobar log is after the impatient log.
+obj.asyncHello(2222, foo);
+// Notice how your foobar log is first because the whole function waited for waitHello to resolve.
+```
+
+
